@@ -1,29 +1,34 @@
 import Link from "next/link"
+import { useRouter } from "next/router";
 import { useState } from "react"
 import styles from '../styles/Nav.module.css'
 
-function Nav() {
-  const [current, setCurrent] = useState<number>(0)
+// TODO: change to map and use map function to create all the buttons
+enum Routes {
+  Home = "/",
+  Posts = "/posts",
+}
 
-  const setNewCurrent = (index: number): void => {
-    setCurrent(index)
-  }
+function Nav() {
+  const { pathname } = useRouter();
+  const rootPath = "/" + pathname.split("/")[1];
+  const [current, setCurrent] = useState<string>(rootPath)
 
   return (
     <div>
       <nav className={styles.nav}>
-        <Link href={"/"}>
+        <Link href={Routes.Home}>
           <button 
-            className={current == 0 ? styles.selected : undefined}
-            onClick={() => setCurrent(0)}
+            className={current == Routes.Home ? styles.selected : undefined}
+            onClick={() => setCurrent(Routes.Home)}
             >
               Home
             </button>
         </Link>
-        <Link href={"/posts"}>
+        <Link href={Routes.Posts}>
           <button 
-            className={current == 1 ? styles.selected : undefined}
-            onClick={() => setCurrent(1)}
+            className={current == Routes.Posts ? styles.selected : undefined}
+            onClick={() => setCurrent(Routes.Posts)}
             >
               Posts
           </button>

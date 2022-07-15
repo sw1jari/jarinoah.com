@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import Nav from '../../components/nav'
+import Body from '../../components/Body'
+import Nav from '../../components/Nav'
 import styles from '../styles/ApiFlask.module.css'
 
 const ApiFlask: NextPage = () => {
   return (
     <div>
-      <Nav/>
       <h1>How to make a REST API with Flask</h1>
     </div>
   )

@@ -1,12 +1,17 @@
 .nav {
-  margin: 16px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
 .nav button {
-  margin-right: 16px;
   font-size: 16px;
+  border: none;
+  height: 50px;
 }
 
-.nav button:last-child {
-  margin-right: 0px;
+.selected {
+  background-color: grey;
 }

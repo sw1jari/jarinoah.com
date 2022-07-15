@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from "next/head";
 import Link from 'next/link';
-import Nav from '../components/nav';
+import Body from '../components/Body';
+import Nav from '../components/Nav';
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -10,7 +11,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Jari Kasandiredjo</title>
       </Head>
-      <Nav/>
       <p>Jari Noah Kasandiredjo</p>
     </div>
   )

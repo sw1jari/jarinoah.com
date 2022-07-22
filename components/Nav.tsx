@@ -3,38 +3,36 @@ import { useRouter } from "next/router";
 import { useState } from "react"
 import styles from '../styles/Nav.module.css'
 
-// TODO: change to map and use map function to create all the buttons
-enum Routes {
-  Home = "/",
-  Posts = "/posts",
+type Route = {
+  name: string
+  path: string
 }
 
-function Nav() {
-  const { pathname } = useRouter();
-  const rootPath = "/" + pathname.split("/")[1];
+const routes: Route[] = [
+  {name: "Home", path: "/"}, 
+  {name: "Posts", path: "/posts"},
+]
+
+function Nav(): JSX.Element {
+  const { pathname } = useRouter()
+  const rootPath = "/" + pathname.split("/")[1]
   const [current, setCurrent] = useState<string>(rootPath)
 
   return (
-    <div>
-      <nav className={styles.nav}>
-        <Link href={Routes.Home}>
-          <button 
-            className={current == Routes.Home ? styles.selected : undefined}
-            onClick={() => setCurrent(Routes.Home)}
+    <nav className={styles.nav}>
+      {routes.map((route) => {
+        return (
+          <Link href={route.path}>
+            <button
+              className={current == route.path ? styles.selected : undefined}
+              onClick={() => setCurrent(route.path)}
             >
-              Home
+              {route.name}
             </button>
-        </Link>
-        <Link href={Routes.Posts}>
-          <button 
-            className={current == Routes.Posts ? styles.selected : undefined}
-            onClick={() => setCurrent(Routes.Posts)}
-            >
-              Posts
-          </button>
-        </Link>
-      </nav>
-    </div>
+          </Link>
+        )
+      })}
+    </nav>
   )
 }
 

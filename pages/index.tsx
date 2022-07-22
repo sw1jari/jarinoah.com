@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from "next/head";
+import Image from 'next/image';
 import Link from 'next/link';
 import Body from '../components/Body';
 import Nav from '../components/Nav';
@@ -11,7 +12,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Jari Kasandiredjo</title>
       </Head>
-      <p>Jari Noah Kasandiredjo</p>
+      {/* <Image src={""} className={styles.profile}></Image> */}
+      <p>Jari Kasandiredjo</p>
     </div>
   )
 }

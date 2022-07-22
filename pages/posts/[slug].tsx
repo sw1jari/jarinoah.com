@@ -2,15 +2,17 @@ import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps, GetStaticPro
 import { useRouter } from 'next/router'
 import { ParsedUrlQuery } from 'querystring'
 import fs from 'fs'
+import { join } from 'path'
 
-type Post = {
+type Props = {
   body: string
 }
 
-function Post(post: Post) {
+// TODO: add return type
+function Post(props: Props) {
 
   return (
-    <p>{post.body}</p>
+    <p>{props.body}</p>
   )
 }
 
@@ -18,21 +20,20 @@ interface Params extends ParsedUrlQuery {
   slug: string
 }
 
-export const getStaticProps: GetStaticProps<Post, Params> = async (context) => {
-  console.dir(context)
-  fs.readdirSync(process.cwd() + '/_posts')
-  
+export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
+  const post = fs.readFileSync(join(process.cwd(), '_posts', context.params!.slug + '.md'))
+
   return {
     props: {
-      body: 'post body',
+      body: post.toString(),
     }
   }
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const postsFolder = fs.readdirSync(process.cwd() + '/_posts');
+  const postsFolder = fs.readdirSync(join(process.cwd(), '_posts'))
   const posts = postsFolder.map((post) => {
-    return { slug: post.split('.md')[0] };
+    return { slug: post.split('.md')[0] }
   })
 
   return {

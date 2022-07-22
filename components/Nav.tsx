@@ -22,7 +22,7 @@ function Nav(): JSX.Element {
     <nav className={styles.nav}>
       {routes.map((route) => {
         return (
-          <Link href={route.path}>
+          <Link key={route.name} href={route.path}>
             <button
               className={current == route.path ? styles.selected : undefined}
               onClick={() => setCurrent(route.path)}

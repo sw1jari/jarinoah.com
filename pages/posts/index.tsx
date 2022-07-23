@@ -33,8 +33,8 @@ const PostsIndex: NextPage<Props> = (props) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async (_) => {
-  const path = join(process.cwd(), '_posts')
-  const titles: string[] = fs.readdirSync(path).map((title) => {
+  const posts = fs.readdirSync(join(process.cwd(), '_posts'))
+  const titles: string[] = posts.map((title) => {
     return title.split('.md')[0]
   })
   titles.splice(titles.indexOf('.gitkeep'), 1)

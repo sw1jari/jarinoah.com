@@ -3,11 +3,23 @@ body {
   background-color: rgb(20, 20, 20);
 }
 
-ul, h1, h2 {
+ul, h1, h2, h3, p {
   margin: 0px;
   padding: 0px;
 }
 
 body, button, a {
   color: lightgray;
+}
+
+section:not(section:last-child) {
+  margin-bottom: 50px;
+}
+
+h1, h3 {
+  margin-bottom: 10px;
+}
+
+ul:not(ul:last-child) {
+  margin-bottom: 20px;
 }

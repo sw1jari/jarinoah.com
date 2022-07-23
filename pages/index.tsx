@@ -11,9 +11,9 @@ const Home: NextPage = () => {
         <title>Jari Kasandiredjo</title>
       </Head>
       <section id='about-me'>
-        <h1>Hey! I'm Jari Kasandiredjo</h1>
+        <h1>Hey! I&apos;m Jari Kasandiredjo</h1>
         <p>
-          I'm a {age} year old Computer Science student at Vrije Universiteit Amsterdam<br/>
+          I&apos;m a {age} year old Computer Science student at Vrije Universiteit Amsterdam<br/>
           I currently do software development for the student rowing 
           club <Link href='https://asopos.nl/'><a>Asopos de Vliet</a></Link><br/>
         </p>
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <section id='portfolio'>
         <h1>Portfolio</h1>
         <ul>
-          <li key='asopos app'>
+          <li key='asopos-app'>
             <Link 
               href='https://apps.apple.com/app/asopos/id1606014844?platform=iphone'
               >
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           <li>TypeScript / JavaScript</li>
           <li>React</li>
           <li>Node.js</li>
-          <li>Express (REST API's)</li>
+          <li>Express (REST API&apos;s)</li>
           <li>Gatsby</li>
           <li>SQL</li>
           <li>Linux</li>

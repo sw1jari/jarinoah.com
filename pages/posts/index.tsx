@@ -39,7 +39,6 @@ const PostsIndex: NextPage<Props> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps<Props> = async (_) => {
   const postsFolder = fs.readdirSync(join(process.cwd(), '_posts'))
-  postsFolder.splice(postsFolder.indexOf('.gitkeep'), 1)
   const posts: Post[] = postsFolder.map<Post>((file) => {
     const slug = file.split('.md')[0]
     return {

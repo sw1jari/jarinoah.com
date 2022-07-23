@@ -55,7 +55,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const postsFolder = fs.readdirSync(join(process.cwd(), '_posts'))
-  postsFolder.splice(postsFolder.indexOf('.gitkeep'), 1)
   const posts = postsFolder.map((post) => {
     return { slug: post.split('.md')[0] }
   })

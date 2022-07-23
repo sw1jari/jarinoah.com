@@ -3,7 +3,7 @@ body {
   background-color: rgb(20, 20, 20);
 }
 
-ul, h1, h2, h3, p {
+ul, h1, h2, h3 {
   margin: 0px;
   padding: 0px;
 }

@@ -5,11 +5,16 @@ import fs from 'fs'
 import { join } from 'path'
 import Head from 'next/head'
 
-interface Props {
-  titles: string[];
+interface Post {
+  slug: string
+  title: string
 }
 
-const PostsIndex: NextPage<Props> = (props) => {
+interface Props {
+  posts: Post[]
+}
+
+const PostsIndex: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -18,11 +23,11 @@ const PostsIndex: NextPage<Props> = (props) => {
         </title>
       </Head>
       <ul className={styles.list}>
-        {props.titles.map((title) => {
+        {posts.map((post) => {
           return (
-            <li key={title}>
-              <Link href={'/posts/'+title}>
-                <a>{title.replace(/-/g, ' ')}</a>
+            <li key={post.title}>
+              <Link href={'/posts/'+post.slug}>
+                <a>{post.title}</a>
               </Link>
             </li>
           )
@@ -33,15 +38,19 @@ const PostsIndex: NextPage<Props> = (props) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async (_) => {
-  const posts = fs.readdirSync(join(process.cwd(), '_posts'))
-  const titles: string[] = posts.map((title) => {
-    return title.split('.md')[0]
+  const postsFolder = fs.readdirSync(join(process.cwd(), '_posts'))
+  postsFolder.splice(postsFolder.indexOf('.gitkeep'), 1)
+  const posts: Post[] = postsFolder.map<Post>((file) => {
+    const slug = file.split('.md')[0]
+    return {
+      slug: slug,
+      title: slug.replace(/-/g, ' ')
+    }
   })
-  titles.splice(titles.indexOf('.gitkeep'), 1)
 
   return {
     props: {
-      titles: titles
+      posts: posts
     }
   }
 }

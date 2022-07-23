@@ -3,6 +3,11 @@ body {
   background-color: rgb(20, 20, 20);
 }
 
-p, button, a {
+ul, h1, h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, button, a {
   color: lightgray;
 }

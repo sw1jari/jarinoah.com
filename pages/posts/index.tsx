@@ -1,24 +1,34 @@
-import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
-import Body from '../../components/Body'
-import Nav from '../../components/Nav'
-import { foo } from '../../lib/post-parser'
 import styles from '../../styles/PostsIndex.module.css'
 import fs from 'fs'
 import { join } from 'path'
+import Head from 'next/head'
 
 interface Props {
   titles: string[];
 }
 
 const PostsIndex: NextPage<Props> = (props) => {
-
   return (
-    <div className={styles.column}>
-      {props.titles.map((title) => {
-        return <Link href={'/posts/'+title}><a>{title.replace(/-/, ' ')}</a></Link>
-      })}
-    </div>
+    <>
+      <Head>
+        <title>
+          Posts | Jari Kasandiredjo
+        </title>
+      </Head>
+      <ul className={styles.list}>
+        {props.titles.map((title) => {
+          return (
+            <li key={title}>
+              <Link href={'/posts/'+title}>
+                <a>{title.replace(/-/g, ' ')}</a>
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    </>
   )
 }
 

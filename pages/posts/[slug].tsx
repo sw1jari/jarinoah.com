@@ -1,18 +1,38 @@
-import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps, GetStaticPropsResult } from 'next'
-import { useRouter } from 'next/router'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import fs from 'fs'
 import { join } from 'path'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse/lib'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
+import styles from '../../styles/Post.module.css'
+import Head from 'next/head'
 
 type Props = {
+  title: string
   body: string
 }
 
 // TODO: add return type
 function Post(props: Props) {
+  const html = unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .processSync(props.body)
+    .toString()
 
   return (
-    <p>{props.body}</p>
+    <>
+      <Head>
+        <title>
+          {props.title+' | Jari Kasandiredjo'}
+        </title>
+      </Head>
+      <h1>{props.title}</h1>
+      <div className={styles.post} dangerouslySetInnerHTML={{__html: html}}/>
+    </>
   )
 }
 
@@ -21,11 +41,15 @@ interface Params extends ParsedUrlQuery {
 }
 
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
-  const post = fs.readFileSync(join(process.cwd(), '_posts', context.params!.slug + '.md'))
+  const slug = context.params!.slug
+  const file = join(process.cwd(), '_posts', slug + '.md')
+  const body = fs.readFileSync(file).toString()
+  const title = slug.replace(/-/g, ' ')
 
   return {
     props: {
-      body: post.toString(),
+      title: title,
+      body: body,
     }
   }
 }

@@ -35,4 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 
 # posts
-/_posts
+/_posts/*
+!/_posts/.gitkeep

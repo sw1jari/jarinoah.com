@@ -6,7 +6,6 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse/lib'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
-import styles from '../../styles/Post.module.css'
 import Head from 'next/head'
 
 type Props = {
@@ -31,7 +30,7 @@ function Post(props: Props) {
         </title>
       </Head>
       <h1>{props.title}</h1>
-      <div className={styles.post} dangerouslySetInnerHTML={{__html: html}}/>
+      <div dangerouslySetInnerHTML={{__html: html}}/>
     </>
   )
 }

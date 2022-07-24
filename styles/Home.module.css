@@ -1,0 +1,27 @@
+.home ul {
+  list-style-position: inside;
+  list-style-type: '- ';
+}
+
+.portfolio ul {
+  list-style-type: none;
+}
+
+.portfolio li:not(li:last-child) {
+  border-bottom: 1px solid rgba(50, 50, 50, 50);
+  margin-bottom: 30px;
+}
+
+.portfolioHeadChildren {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolioHead p, .portfolioHead h3 {
+  margin: 0px
+}
+
+.portfolioHead {
+  margin-bottom: 10px;
+}
+

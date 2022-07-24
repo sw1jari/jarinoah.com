@@ -1,0 +1,14 @@
+.photos img {
+  height: auto;
+  max-height: calc(100vh - 150px);
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  margin: 5px
+}

@@ -11,8 +11,19 @@ const Photos: NextPage = () => {
       <Head>
         <title>Photos | Jari Kasandiredjo</title>
       </Head>
+      <p>
+        &copy; 2022 Jari Kasandiredjo<br/>
+        Do not use without 
+        permission, <a href='mailto:jarikasan@gmail.com'>jarikasan@gmail.com</a>
+      </p>
       {photos.map((photo) => {
-        return <Image key={photo.src} src={photo} placeholder='blur' alt='image taken by me'/>
+        return <div className={styles.container}>
+          <Image 
+          key={photo.src} 
+          src={photo} 
+          placeholder='blur' 
+          alt='image taken by me'/>
+        </div>
       })}
     </div>
   )

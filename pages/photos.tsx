@@ -12,7 +12,7 @@ const Photos: NextPage = () => {
         <title>Photos | Jari Kasandiredjo</title>
       </Head>
       {photos.map((photo) => {
-        return <Image src={photo} placeholder='blur'/>
+        return <Image key={photo.src} src={photo} placeholder='blur'/>
       })}
     </div>
   )

@@ -1,6 +1,12 @@
-.photos img {
-  height: auto;
-  max-height: calc(100vh - 150px);
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex p {
+  margin: 0px auto;
+  margin-bottom: 10px;
 }
 
 .photos {
@@ -8,6 +14,12 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.photos img {
+  height: auto;
+  max-height: calc(100vh - 150px);
+}
+
 
 .container {
   margin: 5px

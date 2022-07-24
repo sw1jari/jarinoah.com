@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Photos.module.css'
 import photos from '../lib/photos'
+import Link from 'next/link'
 
 const Photos: NextPage = () => {
 
@@ -18,11 +19,17 @@ const Photos: NextPage = () => {
       </p>
       <div className={styles.photos}>
         {photos.map((photo) => {
+          const splitFile = photo.src.split('/').slice(-1)[0].split('.')
+          const file = splitFile[0] + '.' + splitFile[2]
           return <div key={photo.src} className={styles.container}>
-            <Image 
-            src={photo} 
-            placeholder='blur' 
-            alt='image taken by me'/>
+            <Link href={'/photos/'+file}>
+              <a>
+                <Image 
+                src={photo} 
+                placeholder='blur' 
+                alt='image taken by me'/>
+              </a>
+            </Link>
           </div>
         })}
       </div>

@@ -38,8 +38,8 @@ const PostsIndex: NextPage<Props> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async (_) => {
-  const postsFolder = fs.readdirSync(join(process.cwd(), '_posts'))
-  const posts: Post[] = postsFolder.map<Post>((file) => {
+  const postsDir = fs.readdirSync(join(process.cwd(), '_posts'))
+  const posts: Post[] = postsDir.map<Post>((file) => {
     const slug = file.split('.md')[0]
     return {
       slug: slug,

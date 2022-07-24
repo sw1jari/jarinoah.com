@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { useRouter } from "next/router";
-import { useState } from "react"
+import Link from 'next/link'
+import { useRouter } from 'next/router';
+import { useState } from 'react'
 import styles from '../styles/Nav.module.css'
 
 type Route = {
@@ -9,13 +9,14 @@ type Route = {
 }
 
 const routes: Route[] = [
-  {name: "Home", path: "/"}, 
-  {name: "Posts", path: "/posts"},
+  {name: 'Home', path: '/'}, 
+  {name: 'Posts', path: '/posts'},
+  {name: 'Photos', path: '/photos'},
 ]
 
 function Nav(): JSX.Element {
   const { pathname } = useRouter()
-  const rootPath = "/" + pathname.split("/")[1]
+  const rootPath = '/' + pathname.split('/')[1]
   const [current, setCurrent] = useState<string>(rootPath)
 
   return (

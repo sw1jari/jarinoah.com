@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for file in ./public/photos/*.jpg; do
+  cwebp "$file" -o "${file%.jpg}.webp" -quiet -mt && du -h "${file%.jpg}.webp" && rm "$file"
+done

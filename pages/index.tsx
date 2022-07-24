@@ -34,7 +34,7 @@ const Home: NextPage = () => {
               href='https://apps.apple.com/app/asopos/id1606014844?platform=iphone'
               >
                 <a target='_blank'>
-                  Mobile app used for the internal communications of a student 
+                  Mobile app used for the internal communication of a student 
                   rowing club
                 </a>
             </Link>

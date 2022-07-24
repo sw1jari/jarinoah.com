@@ -17,9 +17,8 @@ const Photos: NextPage = () => {
         permission, <a href='mailto:jarikasan@gmail.com'>jarikasan@gmail.com</a>
       </p>
       {photos.map((photo) => {
-        return <div className={styles.container}>
+        return <div key={photo.src} className={styles.container}>
           <Image 
-          key={photo.src} 
           src={photo} 
           placeholder='blur' 
           alt='image taken by me'/>

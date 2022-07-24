@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             <Link 
               href='https://apps.apple.com/app/asopos/id1606014844?platform=iphone'
               >
-                <a>
+                <a target='_blank'>
                   Mobile app used for the internal communications of a student 
                   rowing club
                 </a>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             <Link 
               href='https://northwaveregatta.nl'
               >
-                <a>
+                <a target='_blank'>
                   Static site and CMS for the Northwave Regatta rowing competition
                 </a>
             </Link>
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
             <Link 
               href='https://asopos.nl'
               >
-                <a>
+                <a target='_blank'>
                 Static site and CMS for the student rowing club Asopos de Vliet
                 </a>
             </Link>

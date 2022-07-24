@@ -23,7 +23,7 @@ const Photos: NextPage = () => {
           const file = splitFile[0] + '.' + splitFile[2]
           return <div key={photo.src} className={styles.container}>
             <Link href={'/photos/'+file}>
-              <a>
+              <a target='_blank'>
                 <Image 
                 src={photo} 
                 placeholder='blur' 

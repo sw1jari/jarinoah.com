@@ -1,10 +1,10 @@
-2 shallot
-3 garlic
-1/2 tbsp brown sugar
-coco milk
-water
-3 small chili
-1 lemongrass stalk
-basil for garnish
-maggi blokje
-mini beetje currypoeder (kurkuma, koriander, komijn, fenegriek)
+- 2 shallots
+- 3 cloves of garlic
+- 1/2 tablespoon brown sugar
+- Coconut milk
+- Water
+- 3 small chili peppers
+- 2 stalks of lemongrass
+- Basil for garnish
+- Maggi or bouillon cube
+- 1 teaspoon curry powder (turmeric, coriander, cumin, fenugreek)

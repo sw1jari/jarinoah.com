@@ -6,7 +6,6 @@ import photos from '../lib/photos'
 import Link from 'next/link'
 
 const Photos: NextPage = () => {
-
   return (
     <div className={styles.flex}>
       <Head>

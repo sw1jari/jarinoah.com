@@ -13,9 +13,10 @@ const Photos: NextPage = () => {
         <title>Photos | Jari Kasandiredjo</title>
       </Head>
       <p>
-        &copy; 2022 Jari Kasandiredjo<br/>
-        Do not use without 
-        permission, <a href='mailto:jarikasan@gmail.com'>jarikasan@gmail.com</a>
+        This work by Jari Kasandiredjo is licensed under&nbsp;
+        <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>
+          CC BY-NC-SA 4.0
+        </a>
       </p>
       <div className={styles.photos}>
         {photos.map((photo) => {
@@ -27,7 +28,7 @@ const Photos: NextPage = () => {
                 <Image 
                 src={photo} 
                 placeholder='blur' 
-                alt='image taken by me'/>
+                alt='image by Jari Kasandiredjo'/>
               </a>
             </Link>
           </div>

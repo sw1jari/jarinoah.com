@@ -25,6 +25,30 @@ const Home: NextPage = () => {
           <div className={styles.portfolioHead}>
             <h3>Full-Stack Developer</h3>
             <div className={styles.portfolioHeadChildren}>
+              <p>Bonnie</p>
+              <p>2022 - 2023</p>
+            </div>
+          </div>
+          <li key='bonnie'>
+            <p>
+              Bonnie is a system that converts POS receipts to PDFs which you
+              could then download from a server to a mobile app via an NFC 
+              tag.
+            </p>
+            <p>
+              I worked on the mobile app, the software for the device that 
+              converts the receipts to PDFs and uploads them and writes the NFC.
+              I also added support receipts sent via email, these would also be 
+              sent to the server and be scannable in store via the NFC tag.
+            </p>
+            <p>
+              <Link href='/flyer.webp'>I also made a flyer for them!</Link>
+            </p>
+            <p>Tech stack: Python, Ruby on Rails, Flutter</p>
+          </li>
+          <div className={styles.portfolioHead}>
+            <h3>Full-Stack Developer</h3>
+            <div className={styles.portfolioHeadChildren}>
               <p>Asopos de Vliet</p>
               <p>2021 - present</p>
             </div>
@@ -41,7 +65,7 @@ const Home: NextPage = () => {
             <p>Tech stack: Docker, MongoDB, Express, Flutter</p>
           </li>
           <div className={styles.portfolioHead}>
-            <h3>Full-Stack Developer</h3>
+            <h3>Frontend Developer</h3>
             <div className={styles.portfolioHeadChildren}>
               <p>Asopos de Vliet</p>
               <p>2021 - present</p>
@@ -52,13 +76,14 @@ const Home: NextPage = () => {
               href='https://northwaveregatta.nl'
               >
                 <a target='_blank'>
-                  Static site and CMS for the Northwave Regatta rowing competition
+                  Static site and CMS for the Northwave Regatta rowing 
+                  competition
                 </a>
             </Link>
             <p>Tech stack: Strapi, GraphQL, Gatsby, React</p>
           </li>
           <div className={styles.portfolioHead}>
-            <h3>Full-Stack Developer</h3>
+            <h3>Frontend Developer</h3>
             <div className={styles.portfolioHeadChildren}>
               <p>Asopos de Vliet</p>
               <p>2020 - present</p>
@@ -78,23 +103,17 @@ const Home: NextPage = () => {
       </section>
       <section id='skills'>
         <h1>Skills</h1>
-        <h3>2+ Years experience</h3>
         <ul>
+          <li>Dart / Flutter</li>
           <li>TypeScript / JavaScript</li>
           <li>React</li>
-          <li>Node.js</li>
-          <li>Express (REST API&apos;s)</li>
-          <li>Gatsby</li>
+          <li>Python</li>
+          <li>C(++)</li>
+          <li>REST API&apos;s</li>
           <li>GraphQL</li>
           <li>SQL</li>
           <li>Linux</li>
           <li>Docker</li>
-        </ul>
-        <h3>1+ Years experience</h3>
-        <ul>
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>MongoDB</li>
         </ul>
       </section>
     </div>

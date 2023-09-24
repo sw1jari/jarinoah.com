@@ -1,5 +1,3 @@
-**Lentil and Couscous Salad with Feta and Veggies**
-
 *Ingredients:*
 - Green lentils
 - Couscous

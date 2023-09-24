@@ -109,6 +109,7 @@ const Home: NextPage = () => {
           <li>React</li>
           <li>Python</li>
           <li>C(++)</li>
+          <li>Ruby on Rails</li>
           <li>REST API&apos;s</li>
           <li>GraphQL</li>
           <li>SQL</li>

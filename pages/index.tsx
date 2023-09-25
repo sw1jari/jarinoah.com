@@ -14,9 +14,12 @@ const Home: NextPage = () => {
       <section id='about-me'>
         <h1>Hey! I&apos;m Jari Kasandiredjo</h1>
         <p>
-          I&apos;m a {age} year old Computer Science student at Vrije Universiteit Amsterdam<br/>
-          I currently do software development for the student rowing 
-          club <Link href='https://asopos.nl/'><a>Asopos de Vliet</a></Link><br/>
+          I&apos;m a {age} year old Computer Science student at Vrije 
+          Universiteit Amsterdam.
+        </p>
+        <p>
+          I currently do software development for the student rowing club&nbsp;
+          <Link href='https://asopos.nl/'><a>Asopos de Vliet</a></Link>
         </p>
       </section>
       <section id='portfolio' className={styles.portfolio}>

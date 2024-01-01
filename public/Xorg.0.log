@@ -1,0 +1,233 @@
+[    17.354] 
+X.Org X Server 1.21.1.10
+X Protocol Version 11, Revision 0
+[    17.354] Current Operating System: Linux dev 6.6.8-arch1-1 #1 SMP PREEMPT_DYNAMIC Thu, 21 Dec 2023 19:01:01 +0000 x86_64
+[    17.354] Kernel command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=0be7260c-b22d-46b4-9318-3b5e519c7590 rw loglevel=3 quiet
+[    17.354]  
+[    17.354] Current version of pixman: 0.42.2
+[    17.354] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    17.354] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    17.354] (==) Log file: "/var/log/Xorg.0.log", Time: Mon Jan  1 23:18:40 2024
+[    17.359] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    17.361] (==) No Layout section.  Using the first Screen section.
+[    17.361] (==) No screen section available. Using defaults.
+[    17.361] (**) |-->Screen "Default Screen Section" (0)
+[    17.361] (**) |   |-->Monitor "<default monitor>"
+[    17.361] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[    17.361] (==) Automatically adding devices
+[    17.361] (==) Automatically enabling devices
+[    17.361] (==) Automatically adding GPU devices
+[    17.361] (==) Automatically binding GPU devices
+[    17.361] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    17.362] (WW) The directory "/usr/share/fonts/misc" does not exist.
+[    17.362] 	Entry deleted from font path.
+[    17.364] (WW) `fonts.dir' not found (or not valid) in "/usr/share/fonts/TTF".
+[    17.364] 	Entry deleted from font path.
+[    17.364] 	(Run 'mkfontdir' on "/usr/share/fonts/TTF").
+[    17.364] (WW) The directory "/usr/share/fonts/OTF" does not exist.
+[    17.364] 	Entry deleted from font path.
+[    17.364] (WW) The directory "/usr/share/fonts/Type1" does not exist.
+[    17.364] 	Entry deleted from font path.
+[    17.364] (WW) The directory "/usr/share/fonts/100dpi" does not exist.
+[    17.364] 	Entry deleted from font path.
+[    17.364] (WW) The directory "/usr/share/fonts/75dpi" does not exist.
+[    17.364] 	Entry deleted from font path.
+[    17.364] (==) FontPath set to:
+	
+[    17.364] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    17.364] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    17.364] (II) Module ABI versions:
+[    17.364] 	X.Org ANSI C Emulation: 0.4
+[    17.364] 	X.Org Video Driver: 25.2
+[    17.364] 	X.Org XInput driver : 24.4
+[    17.364] 	X.Org Server Extension : 10.0
+[    17.364] (++) using VT number 1
+
+[    17.365] (II) systemd-logind: took control of session /org/freedesktop/login1/session/_31
+[    17.365] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    17.365] (II) Platform probe for /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/drm/card1
+[    17.365] (II) systemd-logind: got fd for /dev/dri/card1 226:1 fd 13 paused 0
+[    17.365] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    17.365] (II) Platform probe for /sys/devices/platform/simple-framebuffer.0/drm/card0
+[    17.365] (II) systemd-logind: got fd for /dev/dri/card0 226:0 fd 14 paused 0
+[    17.366] (**) OutputClass "nvidia" ModulePath extended to "/usr/lib/nvidia/xorg,/usr/lib/xorg/modules,/usr/lib/xorg/modules"
+[    17.366] (--) PCI:*(1@0:0:0) 10de:1c03:1462:3281 rev 161, Mem @ 0xa2000000/16777216, 0x90000000/268435456, 0xa0000000/33554432, I/O @ 0x00003000/128, BIOS @ 0x????????/131072
+[    17.366] (WW) Open ACPI failed (/var/run/acpid.socket) (No such file or directory)
+[    17.366] (II) LoadModule: "glx"
+[    17.370] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[    17.381] (II) Module glx: vendor="X.Org Foundation"
+[    17.381] 	compiled for 1.21.1.10, module version = 1.0.0
+[    17.381] 	ABI class: X.Org Server Extension, version 10.0
+[    17.381] (II) Applying OutputClass "nvidia" to /dev/dri/card1
+[    17.381] 	loading driver: nvidia
+[    17.381] (==) Matched nvidia as autoconfigured driver 0
+[    17.381] (==) Matched nouveau as autoconfigured driver 1
+[    17.381] (==) Matched nv as autoconfigured driver 2
+[    17.381] (==) Matched modesetting as autoconfigured driver 3
+[    17.381] (==) Matched fbdev as autoconfigured driver 4
+[    17.381] (==) Matched vesa as autoconfigured driver 5
+[    17.381] (==) Assigned the driver to the xf86ConfigLayout
+[    17.381] (II) LoadModule: "nvidia"
+[    17.382] (II) Loading /usr/lib/xorg/modules/drivers/nvidia_drv.so
+[    17.398] (II) Module nvidia: vendor="NVIDIA Corporation"
+[    17.398] 	compiled for 1.6.99.901, module version = 1.0.0
+[    17.398] 	Module class: X.Org Video Driver
+[    17.398] (II) LoadModule: "nouveau"
+[    17.398] (WW) Warning, couldn't open module nouveau
+[    17.398] (EE) Failed to load module "nouveau" (module does not exist, 0)
+[    17.398] (II) LoadModule: "nv"
+[    17.398] (WW) Warning, couldn't open module nv
+[    17.398] (EE) Failed to load module "nv" (module does not exist, 0)
+[    17.398] (II) LoadModule: "modesetting"
+[    17.398] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    17.404] (II) Module modesetting: vendor="X.Org Foundation"
+[    17.404] 	compiled for 1.21.1.10, module version = 1.21.1
+[    17.404] 	Module class: X.Org Video Driver
+[    17.404] 	ABI class: X.Org Video Driver, version 25.2
+[    17.404] (II) LoadModule: "fbdev"
+[    17.404] (WW) Warning, couldn't open module fbdev
+[    17.404] (EE) Failed to load module "fbdev" (module does not exist, 0)
+[    17.404] (II) LoadModule: "vesa"
+[    17.404] (WW) Warning, couldn't open module vesa
+[    17.404] (EE) Failed to load module "vesa" (module does not exist, 0)
+[    17.404] (II) NVIDIA dlloader X Driver  545.29.06  Thu Nov 16 01:52:34 UTC 2023
+[    17.404] (II) NVIDIA Unified Driver for all Supported NVIDIA GPUs
+[    17.404] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    17.404] (II) systemd-logind: releasing fd for 226:1
+[    17.405] (II) Loading sub module "fb"
+[    17.405] (II) LoadModule: "fb"
+[    17.405] (II) Module "fb" already built-in
+[    17.405] (II) Loading sub module "wfb"
+[    17.405] (II) LoadModule: "wfb"
+[    17.405] (II) Loading /usr/lib/xorg/modules/libwfb.so
+[    17.407] (II) Module wfb: vendor="X.Org Foundation"
+[    17.407] 	compiled for 1.21.1.10, module version = 1.0.0
+[    17.407] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    17.407] (WW) Falling back to old probe method for modesetting
+[    17.407] (II) systemd-logind: releasing fd for 226:0
+[    17.407] (II) modeset(G0): using drv /dev/dri/card0
+[    17.407] (II) NVIDIA(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[    17.407] (==) NVIDIA(0): Depth 24, (==) framebuffer bpp 32
+[    17.407] (==) NVIDIA(0): RGB weight 888
+[    17.407] (==) NVIDIA(0): Default visual is TrueColor
+[    17.407] (==) NVIDIA(0): Using gamma correction (1.0, 1.0, 1.0)
+[    17.407] (II) Applying OutputClass "nvidia" options to /dev/dri/card1
+[    17.407] (**) NVIDIA(0): Option "AllowEmptyInitialConfiguration"
+[    17.407] (**) NVIDIA(0): Enabling 2D acceleration
+[    17.407] (II) Loading sub module "glxserver_nvidia"
+[    17.407] (II) LoadModule: "glxserver_nvidia"
+[    17.407] (II) Loading /usr/lib/nvidia/xorg/libglxserver_nvidia.so
+[    17.800] (II) Module glxserver_nvidia: vendor="NVIDIA Corporation"
+[    17.800] 	compiled for 1.6.99.901, module version = 1.0.0
+[    17.800] 	Module class: X.Org Server Extension
+[    17.800] (II) NVIDIA GLX Module  545.29.06  Thu Nov 16 01:55:23 UTC 2023
+[    17.800] (II) NVIDIA: The X server supports PRIME Render Offload.
+[    18.160] (--) NVIDIA(0): Valid display device(s) on GPU-0 at PCI:1:0:0
+[    18.160] (--) NVIDIA(0):     DFP-0
+[    18.160] (--) NVIDIA(0):     DFP-1
+[    18.160] (--) NVIDIA(0):     DFP-2 (boot)
+[    18.160] (--) NVIDIA(0):     DFP-3
+[    18.160] (--) NVIDIA(0):     DFP-4
+[    18.160] (--) NVIDIA(0):     DFP-5
+[    18.160] (--) NVIDIA(0):     DFP-6
+[    18.160] (--) NVIDIA(0):     DFP-7
+[    18.161] (II) NVIDIA(0): NVIDIA GPU NVIDIA GeForce GTX 1060 6GB (GP106-A) at PCI:1:0:0
+[    18.161] (II) NVIDIA(0):     (GPU-0)
+[    18.161] (--) NVIDIA(0): Memory: 6291456 kBytes
+[    18.161] (--) NVIDIA(0): VideoBIOS: 86.06.27.00.7a
+[    18.161] (II) NVIDIA(0): Detected PCI Express Link width: 16X
+[    18.161] (--) NVIDIA(GPU-0): DFP-0: disconnected
+[    18.161] (--) NVIDIA(GPU-0): DFP-0: Internal TMDS
+[    18.161] (--) NVIDIA(GPU-0): DFP-0: 330.0 MHz maximum pixel clock
+[    18.161] (--) NVIDIA(GPU-0): 
+[    18.253] (--) NVIDIA(GPU-0): Samsung S22D300 (DFP-1): connected
+[    18.253] (--) NVIDIA(GPU-0): Samsung S22D300 (DFP-1): Internal TMDS
+[    18.253] (--) NVIDIA(GPU-0): Samsung S22D300 (DFP-1): 600.0 MHz maximum pixel clock
+[    18.253] (--) NVIDIA(GPU-0): 
+[    18.253] (--) NVIDIA(GPU-0): Asustek Computer Inc ASUS VG249 (DFP-2): connected
+[    18.253] (--) NVIDIA(GPU-0): Asustek Computer Inc ASUS VG249 (DFP-2): Internal DisplayPort
+[    18.253] (--) NVIDIA(GPU-0): Asustek Computer Inc ASUS VG249 (DFP-2): 1440.0 MHz maximum pixel clock
+[    18.253] (--) NVIDIA(GPU-0): 
+[    18.259] (--) NVIDIA(GPU-0): DFP-3: disconnected
+[    18.259] (--) NVIDIA(GPU-0): DFP-3: Internal TMDS
+[    18.259] (--) NVIDIA(GPU-0): DFP-3: 165.0 MHz maximum pixel clock
+[    18.259] (--) NVIDIA(GPU-0): 
+[    18.259] (--) NVIDIA(GPU-0): DFP-4: disconnected
+[    18.259] (--) NVIDIA(GPU-0): DFP-4: Internal DisplayPort
+[    18.259] (--) NVIDIA(GPU-0): DFP-4: 1440.0 MHz maximum pixel clock
+[    18.259] (--) NVIDIA(GPU-0): 
+[    18.259] (--) NVIDIA(GPU-0): DFP-5: disconnected
+[    18.259] (--) NVIDIA(GPU-0): DFP-5: Internal TMDS
+[    18.259] (--) NVIDIA(GPU-0): DFP-5: 165.0 MHz maximum pixel clock
+[    18.259] (--) NVIDIA(GPU-0): 
+[    18.259] (--) NVIDIA(GPU-0): DFP-6: disconnected
+[    18.259] (--) NVIDIA(GPU-0): DFP-6: Internal DisplayPort
+[    18.259] (--) NVIDIA(GPU-0): DFP-6: 1440.0 MHz maximum pixel clock
+[    18.259] (--) NVIDIA(GPU-0): 
+[    18.259] (--) NVIDIA(GPU-0): DFP-7: disconnected
+[    18.259] (--) NVIDIA(GPU-0): DFP-7: Internal TMDS
+[    18.259] (--) NVIDIA(GPU-0): DFP-7: 165.0 MHz maximum pixel clock
+[    18.259] (--) NVIDIA(GPU-0): 
+[    18.266] (==) NVIDIA(0): 
+[    18.266] (==) NVIDIA(0): No modes were requested; the default mode "nvidia-auto-select"
+[    18.266] (==) NVIDIA(0):     will be used as the requested mode.
+[    18.266] (==) NVIDIA(0): 
+[    18.266] (II) NVIDIA(0): Validated MetaModes:
+[    18.266] (II) NVIDIA(0):     "DFP-2:nvidia-auto-select,DFP-1:nvidia-auto-select"
+[    18.266] (II) NVIDIA(0): Virtual screen size determined to be 3840 x 1080
+[    18.272] (--) NVIDIA(0): DPI set to (92, 91); computed from "UseEdidDpi" X config
+[    18.272] (--) NVIDIA(0):     option
+[    18.272] (==) modeset(G0): Depth 24, (==) framebuffer bpp 32
+[    18.272] (==) modeset(G0): RGB weight 888
+[    18.272] (==) modeset(G0): Default visual is TrueColor
+[    18.272] (II) Loading sub module "glamoregl"
+[    18.272] (II) LoadModule: "glamoregl"
+[    18.272] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    18.284] (II) Module glamoregl: vendor="X.Org Foundation"
+[    18.284] 	compiled for 1.21.1.10, module version = 1.0.1
+[    18.284] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    19.321] (EE) 
+[    19.321] (EE) Backtrace:
+[    19.322] (EE) 0: /usr/lib/Xorg (xorg_backtrace+0x2dd) [0x55d13f9adc5d]
+[    19.323] (EE) 1: /usr/lib/libc.so.6 (__sigaction+0x50) [0x7f01c76ec710]
+[    19.323] (EE) 2: /usr/lib/dri/kms_swrast_dri.so (__driDriverGetExtensions_d3d12+0x5e8394) [0x7f01becb3324]
+[    19.323] (EE) 3: /usr/lib/dri/kms_swrast_dri.so (nouveau_drm_screen_create+0x2a3e04) [0x7f01bf1acd94]
+[    19.323] (EE) unw_get_proc_name failed: no unwind info found [-10]
+[    19.324] (EE) 4: /usr/lib/dri/kms_swrast_dri.so (?+0x0) [0x7f01be6ba376]
+[    19.324] (EE) unw_get_proc_name failed: no unwind info found [-10]
+[    19.324] (EE) 5: /usr/lib/dri/kms_swrast_dri.so (?+0x0) [0x7f01be6c70f4]
+[    19.324] (EE) unw_get_proc_name failed: no unwind info found [-10]
+[    19.324] (EE) 6: /usr/lib/dri/kms_swrast_dri.so (?+0x0) [0x7f01be6c76b5]
+[    19.325] (EE) 7: /usr/lib/libgbm.so.1 (gbm_create_device+0x2c7) [0x7f01c7cd0bc7]
+[    19.326] (EE) 8: /usr/lib/libgbm.so.1 (gbm_create_device+0x491) [0x7f01c7cd0d91]
+[    19.327] (EE) 9: /usr/lib/libgbm.so.1 (gbm_create_device+0x279d) [0x7f01c7cd309d]
+[    19.327] (EE) unw_get_proc_name failed: no unwind info found [-10]
+[    19.327] (EE) 10: /usr/lib/libgbm.so.1 (?+0x0) [0x7f01c7cd08dc]
+[    19.328] (EE) 11: /usr/lib/libgbm.so.1 (gbm_create_device+0x119) [0x7f01c7cd0a19]
+[    19.328] (EE) 12: /usr/lib/xorg/modules/libglamoregl.so (glamor_egl_init+0x65) [0x7f01c61d06d5]
+[    19.329] (EE) unw_get_proc_name failed: no unwind info found [-10]
+[    19.329] (EE) 13: /usr/lib/xorg/modules/drivers/modesetting_drv.so (?+0x0) [0x7f01c6cdfe39]
+[    19.329] (EE) 14: /usr/lib/Xorg (InitOutput+0x18d5) [0x55d13f9d2ce5]
+[    19.329] (EE) 15: /usr/lib/Xorg (SProcXkbDispatch+0x187a) [0x55d13f899f73]
+[    19.330] (EE) 16: /usr/lib/libc.so.6 (__libc_init_first+0x90) [0x7f01c76d5cd0]
+[    19.330] (EE) 17: /usr/lib/libc.so.6 (__libc_start_main+0x8a) [0x7f01c76d5d8a]
+[    19.331] (EE) 18: /usr/lib/Xorg (_start+0x25) [0x55d13f89b565]
+[    19.331] (EE) 
+[    19.331] (EE) Segmentation fault at address 0x0
+[    19.331] (EE) 
+Fatal server error:
+[    19.331] (EE) Caught signal 11 (Segmentation fault). Server aborting
+[    19.331] (EE) 
+[    19.331] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[    19.331] (EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+[    19.331] (EE) 
+[    19.333] (EE) Server terminated with error (1). Closing log file.
